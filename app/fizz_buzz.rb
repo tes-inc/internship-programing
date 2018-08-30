@@ -1,6 +1,6 @@
 class FizzBuzz
-  def execute
+  def self.execute
   end
 end
 
-FizzBuzz.new.execute
+FizzBuzz.execute

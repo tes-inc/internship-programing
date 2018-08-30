@@ -1,9 +1,6 @@
 class Anagram
-  def initialize(first, second)
-  end
-
-  def equal?
+  def self.equal?(first, second)
   end
 end
 
-Anagram.new(ARGV[0], ARGV[1]).equal?
+Anagram.equal?(ARGV[0], ARGV[1])
