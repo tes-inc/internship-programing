@@ -10,32 +10,26 @@ class ReadableCode
 
   def execute
     if @one.nil?
-      p 'one is nil!'
       @one = 'ONE'
     end
 
     if @two.nil?
-      p 'two is nil!'
       @two = 'TWO'
     end
 
     if @three.nil?
-      p 'three is nil!'
       @three = 'THREE'
     end
 
     if @four.nil?
-      p 'four is nil!'
       @four = 'FOUR'
     end
 
     if @five.nil?
-      p 'five is nil!'
       @five = 'FIVE'
     end
 
     if @six.nil?
-      p 'six is nil!'
       @six = 'SIX'
     end
 
