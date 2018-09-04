@@ -1,91 +1,23 @@
 class ReadableCode
-  def initialize(one = nil, two = nil, three = nil, four = nil, five = nil, six = nil)
-    @one = one
-    @two = two
-    @three = three
-    @four = four
-    @five = five
-    @six = six
+  def initialize(args)
+    @one   = args.fetch(0, 'ONE')
+    @two   = args.fetch(1, 'TWO')
+    @three = args.fetch(2, 'THREE')
+    @four  = args.fetch(3, 'FOUR')
+    @five  = args.fetch(4, 'FIVE')
+    @six   = args.fetch(5, 'SIX')
   end
 
   def execute
-    if @one.nil?
-      p 'one is nil!'
-      @one = 'ONE'
-    end
-
-    if @two.nil?
-      p 'two is nil!'
-      @two = 'TWO'
-    end
-
-    if @three.nil?
-      p 'three is nil!'
-      @three = 'THREE'
-    end
-
-    if @four.nil?
-      p 'four is nil!'
-      @four = 'FOUR'
-    end
-
-    if @five.nil?
-      p 'five is nil!'
-      @five = 'FIVE'
-    end
-
-    if @six.nil?
-      p 'six is nil!'
-      @six = 'SIX'
-    end
-
-    array = Array.new
-    array.push(to_lower_case(@one))
-    array.push(to_lower_case(@two))
-    array.push(to_lower_case(@three))
-    array.push(to_lower_case(@four))
-    array.push(to_lower_case(@five))
-    array.push(to_lower_case(@six))
-    return array
-  end
-
-  def to_lower_case(word)
-    dictionary = {
-      'A' => 'a',
-      'B' => 'b',
-      'C' => 'c',
-      'D' => 'd',
-      'E' => 'e',
-      'F' => 'f',
-      'G' => 'g',
-      'H' => 'h',
-      'I' => 'i',
-      'J' => 'j',
-      'K' => 'k',
-      'L' => 'l',
-      'M' => 'm',
-      'N' => 'n',
-      'O' => 'o',
-      'P' => 'p',
-      'Q' => 'q',
-      'R' => 'r',
-      'S' => 's',
-      'T' => 't',
-      'U' => 'u',
-      'V' => 'v',
-      'W' => 'w',
-      'X' => 'x',
-      'Y' => 'y',
-      'Z' => 'z'
-    }
-
-    result = ''
-    word.each_char do |v|
-      result += dictionary[v]
-    end
-
-    result
+    [
+      @one.downcase,
+      @two.downcase,
+      @three.downcase,
+      @four.downcase,
+      @five.downcase,
+      @six.downcase
+    ]
   end
 end
 
-p ReadableCode.new(ARGV[0], ARGV[1], ARGV[2], ARGV[3], ARGV[4], ARGV[5]).execute unless defined?(RSpec)
+p ReadableCode.new(ARGV).execute unless defined?(RSpec)
