@@ -3,4 +3,4 @@ class FizzBuzz
   end
 end
 
-FizzBuzz.new.execute
+FizzBuzz.new.execute unless defined?(RSpec)
