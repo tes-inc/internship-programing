@@ -50,7 +50,7 @@
 ### 修正プログラム
 
 [app/readable_code.rb](app/readable_code.rb) ファイルに対して修正を行う。<br>
-テストコードは、[spec/app/anagram_spec.rb](spec/app/readable_code_spec.rb) ファイルに記述する。
+テストコードは、[spec/app/readable_code_spec.rb](spec/app/readable_code_spec.rb) ファイルに記述する。
 
 ### 実行方法
 
