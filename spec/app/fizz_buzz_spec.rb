@@ -2,10 +2,23 @@ require 'spec_helper'
 require './app/fizz_buzz'
 
 RSpec.describe FizzBuzz do
-  let(:instannce) { described_class.new }
+  let(:instance) { described_class.new }
+
+  describe '#execute' do
+    before do
+      allow(instance).to receive(:response).with(anything).and_return(1)
+    end
+
+    subject { instance.execute }
+
+    it '#response メソッドを100回呼び出していること' do
+      expect(instance).to receive(:response).with(anything).exactly(100).times
+      subject
+    end
+  end
 
   describe '#response' do
-    subject { instannce.response(argument) }
+    subject { instance.response(argument) }
 
     context '引数が3の倍数である場合' do
       let(:argument) { 3 }
