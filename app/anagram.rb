@@ -3,4 +3,4 @@ class Anagram
   end
 end
 
-Anagram.equal?(ARGV[0], ARGV[1])
+p Anagram.equal?(ARGV[0], ARGV[1])
