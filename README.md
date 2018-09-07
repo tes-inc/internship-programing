@@ -28,7 +28,7 @@ https://docs.docker.com/toolbox/toolbox_install_windows/ <br>
     $ docker-machine env default
     # 表示された環境変数をコピペ実行
 
-### Docker環境にログイン
+### DockerコンテナのLinux環境にログイン
 
     $ docker-compose run app bash
 
