@@ -1,5 +1,39 @@
 # internship-programing
 
+## :computer: Installation
+
+### DockerToobox インストール
+
+#### for Mac
+
+https://docs.docker.com/toolbox/toolbox_install_mac/
+
+#### for Windows
+
+https://docs.docker.com/toolbox/toolbox_install_windows/ <br>
+ダウンロード後、 `DockerToolbox.exe` を起動。パラメータはすべてデフォルトのままでインストールする。
+
+### Docker Quickstart Terminal 起動
+
+`Docker Quickstart Terminal` を選択してクリックする。<br>
+
+### git clone
+
+    $ git clone git@github.com:tes-inc/internship-programing.git
+    $ cd internship-programing
+
+### Docker machine 起動
+
+    $ docker-machine start default
+    $ docker-machine env default
+    # 表示された環境変数をコピペ実行
+
+### コマンド実行
+
+    $ docker-compose run app {コマンド}
+
+---
+
 ## :star: FizzBuzz問題
 
 ```
@@ -21,6 +55,8 @@
 
     $ rspec spec/app/fizz_buzz_spec.rb
 
+---
+
 ## :star: アナグラム問題
 
 ```
@@ -41,7 +77,9 @@
 
     $ rspec spec/app/anagram_spec.rb
 
-## :star: 可読性向上問題
+---
+
+## :star: リファクタリング問題
 
 ```
 あるプログラムに対して、機能を変更せずに可読性を向上させる修正を行う。

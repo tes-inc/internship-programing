@@ -1,0 +1,6 @@
+version: '3'
+services:
+  app: &web_base
+    build: .
+    volumes:
+      - .:/internship
